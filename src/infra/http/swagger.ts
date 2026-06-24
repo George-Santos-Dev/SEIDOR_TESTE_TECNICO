@@ -218,6 +218,14 @@ export const openApiDocument = {
               },
             },
           },
+          "409": {
+            description: "Driver name already exists",
+            content: {
+              "application/json": {
+                schema: { $ref: "#/components/schemas/ErrorResponse" },
+              },
+            },
+          },
         },
       },
       get: {
@@ -318,6 +326,14 @@ export const openApiDocument = {
             content: {
               "application/json": {
                 schema: { $ref: "#/components/schemas/ValidationError" },
+              },
+            },
+          },
+          "409": {
+            description: "Driver name already exists",
+            content: {
+              "application/json": {
+                schema: { $ref: "#/components/schemas/ErrorResponse" },
               },
             },
           },
