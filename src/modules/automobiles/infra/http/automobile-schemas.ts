@@ -13,7 +13,7 @@ export const createAutomobileBodySchema = z.object({
 export const updateAutomobileBodySchema = createAutomobileBodySchema;
 
 export const listAutomobilesQuerySchema = z.object({
-  plate: z.string().trim().optional(),
+  plate: z.string().trim().min(1).optional(),
   color: z.string().trim().min(1).optional(),
   brand: z.string().trim().min(1).optional(),
 });
